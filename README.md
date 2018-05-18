@@ -2,7 +2,11 @@
 Simple Example HTTP API for generating Firebase Custom Tokens using LDAP logins.
 
 ## Usage
-First clone the repo, then install a WSGI server like gunicorn:
+First clone the repo, then install the requirements:
+
+    pip install -r requirements.txt
+
+Then, install a WSGI server like gunicorn:
 
     pip install gunicorn
     
@@ -12,7 +16,7 @@ If your LDAP server is not hosted on `localhost:389`, specify a server with the 
 
     LDAP_SERVER=myhost.local:5555
 
-Run the application using your WSGI server. For example, with gunicorn:
+Run the application using your WSGI server. For example, with gunicorn, run:
 
     gunicorn --bind 127.0.0.1:8000 ldap2firebase
     
